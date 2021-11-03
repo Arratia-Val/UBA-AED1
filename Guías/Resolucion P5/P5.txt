@@ -1,0 +1,466 @@
+EJERCICIO 1
+
+Especificación
+
+	proc sumar (in s :<seq Z>, out result : Z){
+		pre  { True }
+		post { result = ∑ (from j = 0 to |s|-1) s[j] }
+	}
+
+Implementación en SmallLang
+
+	result := 0;
+	i := 0;
+
+	while(i<s.size()) do
+		result := result + s[i];
+		i := i+1;
+	endwhile
+
+Invariante
+
+	I ≡ 0 ≤ i ≤ |s| ∧L result = ∑ (from j = 0 to i-1) s[j]
+
+Parte a
+
+	Pre del ciclo ≡ result = 0 ∧ i = 0
+
+	Post del ciclo ≡ result = ∑ (from j = 0 to i-1) s[j]
+
+Parte b
+	I ≡ 0 ≤ i < |s| ∧L result = ∑ (from j = 0 to i-1) s[j]
+
+	si vale I∧B al comenzar una iteración  ⟶ vale I al finalizar
+	iteración |s|-1 hace que i = |s| y eso hace que I ≡ False
+	
+Parte c
+	I ≡ 0 ≤ i ≤ |s| ∧L result = ∑ (from j = 0 to i) s[j]
+
+	se indefine s[j] en la útlima iteración de la sumatoria de I porque i = |s|
+
+Parte d
+	se indefine s[i] en la útlima iteración del ciclo porque i = |s|
+	.
+
+Parte e
+	P ⟶ I
+		trivialmente True
+		P ≡ i=0 ∧ result = 0 ⟶ 0 ≤ i ≤ |s| ∧ result = ∑ (from j = 0 to -1) s[j] = 0
+
+	{I ∧ B} S {I}
+		I ∧ B ⟶ wp(S, I)
+			I ∧ B ≡ 0 ≤ i < |s| ∧L result = ∑ (from j = 0 to i-1) s[j]
+
+			wp(S, I) ≡ wp(S1, wp(S2, I) )
+					 ≡ wp(S1, 0 ≤ i < |s| ∧L result = ∑ (from j = 0 to i) s[j] ) 
+					 ≡ def(s[i]) ∧L 0 ≤ i < |s| ∧L result = ∑ (from j = 0 to i) s[j] - s[i]
+					 ≡ 0 ≤ i < |s| ∧L result = ∑ (from j = 0 to i-1) s[j]
+
+
+			Correcto porque P ⟶ P  ∀ P tq def(P) ≡ True
+
+	I∧¬B ⟶ Q 
+		I∧¬B ≡ i = |s| ∧L result = ∑ (from j = 0 to |s|-1) s[j]
+
+		Q ≡ result = ∑ (from j = 0 to |s|-1) s[j]
+
+		P ∧ Q ⟶ P   
+
+		∀ P,Q tq def(P) ≡ True ≡ def(Q)
+
+Parte f
+	fv = |s| - i 
+
+	{ I ∧ B ∧ v₀ = fv } S { fv < v₀ }
+		I ∧ B ∧ v₀ = fv ⟶ wp(S, fv < v₀)
+
+			I ∧ B ∧ v₀ = fv ≡ 0 = i ∧L result = ∑ (from j = 0 to i-1) s[j] ∧ v₀ = |s|
+						     ≡ 0 = i ∧L result = ∑ (from j = 0 to 0-1) s[j] ∧ v₀ = |s|
+						     ≡ 0 = i ∧  result = 0 ∧ v₀ = |s|-i
+
+			wp(S, fv < v₀) ≡ wp(S1, wp(S2, fv < v₀) )
+						   ≡ wp(S1,   fv(i+1) < |s|-i )
+						   ≡ wp(S1,   |s|-i-1 < |s|-i )
+						   ≡ def(s[i])   ∧ -1 < 0
+						   ≡ 0 ≤ i < |s|
+
+			wp(S, fv < v₀) ≡ wp(S1, wp(S2, fv < v₀) )
+						   ≡ wp(S1,   fv(i+1) < v₀ )
+						   ≡ wp(S1,   |s|-i-1 < v₀ )
+						   ≡ def(s[i])   ∧ |s|-i-1 < v₀
+						   ≡ 0 ≤ i < |s| ∧ |s|-i-1 < v₀
+
+	I ∧ fv ≤ 0 ⟶ ¬B
+		I ∧ fv ≤ 0 ≡ 0 ≤ i ≤ |s| ∧L result = ∑ (from j = 0 to i-1) s[j] ∧ i ≥  |s|
+				    ≡ i = |s| ∧L result = ∑ (from j = 0 to i-1) s[j]
+
+		¬B ≡ i ≥ |s|
+
+																						 _
+																						|_|
+
+
+
+
+-----------------------------------------------------------------------------------------------
+EJERCICIO 2
+
+Especificación
+
+	proc sumarParesHastaN (in n: Z, out result: Z){
+		Pre  { n ≥0 }
+		Post { result = ∑(from j = 0 to n-1) (if j%2=0 then j else 0 fi) }
+	}
+
+Implementación en SmallLang
+
+	result := 0;
+	i := 0;
+	while (i<n) do
+		result := result + i
+		i := i+2
+	endwhile
+
+Invariante del ciclo
+	
+	I  ≡ 0 ≤ i ≤ n+1 ∧ i%2=0 ∧ result = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi) 
+
+
+SOLUCIÓN 
+
+Pc ≡ i = 0 ∧ result = 0 ∧ n ≥ 0
+
+Qc ≡ result = ∑(from j = 0 to n-1) (if j%2=0 then j else 0 fi)
+
+Demostración de la corrección parcial
+
+	P ⟶ I
+		trivialmente True
+		.
+
+	{I ∧ B} S {I}
+		I ∧ B ⟶ wp(S, I)
+
+			I ∧ B ≡ 0 ≤ i ≤ n+1 ∧ i%2=0 ∧ result = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi) ∧ i<n
+
+				   ≡ 0 ≤ i < n  ∧ i%2=0 ∧ result = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi)
+
+
+			wp(S, I) ≡ wp(S1, wp(S2, I) )
+
+					 ≡ wp(S1, 0 ≤ i+2 ≤ n+1 ∧ i%2=0 ∧ result = ∑(from j = 0 to i+1) (if j%2=0 then j else 0 fi) )
+
+					 ≡ wp(S1,  -2 ≤ i ≤ n-1 ∧ i%2=0 ∧ result = ∑(from j = 0 to i+1) (if j%2=0 then j else 0 fi) )
+
+					 ≡ -2 ≤ i ≤ n-1 ∧ i%2=0 ∧ result + i = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi) + (if i%2=0 then i else 0 fi) + (if i%2=0 then i+1 else 0 fi)
+
+					 ≡ -2 ≤ i ≤ n-1 ∧ i%2=0 ∧ result + i = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi) + i
+
+					 ≡ -2 ≤ i ≤ n-1 ∧ i%2=0 ∧ result = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi)
+
+	I∧¬B ⟶ Q 
+		I∧¬B ≡ 0 ≤ i ≤ n+1 ∧ i%2=0 ∧ result = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi) ∧ i ≥ n
+
+			  ≡ n ≤ i ≤ n+1 ∧ i%2=0 ∧ result = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi)
+
+			  ≡ (n=i ∨ i=n+1) ∧ i%2=0 ∧ result = ∑(from j = 0 to i-1) (if j%2=0 then j else 0 fi)
+
+			Caso n+1 par ⟶ i=n
+			Caso n par   ⟶ i=n+1
+
+
+		Q ≡ result = ∑(from j = 0 to n-1) (if j%2=0 then j else 0 fi)
+																						 _
+																						|_|
+
+
+
+
+-----------------------------------------------------------------------------------------------
+EJERCICIO 4
+
+Especificación
+
+	proc sumaDivisores (in n: Z, out result : Z){
+		Pre  { n ≥ 1 }
+		Post { result = ∑ (from j=1 to n) (if n%j=0 then j else 0 fi) }
+	}
+
+
+Parte a
+	
+	result := 0;
+	i := 1;
+	while (i ≤ n) do
+		if (n%i = 0)
+			result := result + i
+		else
+			skip
+		endif
+		i := i +1
+
+	endwhile
+
+Parte b
+	I ≡ 1 ≤ i ≤ n ∧ result = ∑(from j=1 to i) (if n%j=0 then j else 0 fi)
+
+	Se pueden hacer dos opciones según la implementación
+	1) Arrancar con i:=1 y definir i:=i+1 en la última linea del while
+		I ≡ 1 ≤ i ≤ n+1 ∧ result = ∑(from j=1 to i-1) (if n%j=0 then j else 0 fi)
+	
+	2) Arrancar con i:=0 y definir i:=i+1 en la primer linea del while
+		I ≡ 0 ≤ i ≤ n+1 ∧ result = ∑(from j=1 to i) (if n%j=0 then j else 0 fi)
+
+		Vale porque n mod (n+1) = n ∀n ∈ N
+
+	
+
+
+
+	
+
+
+
+
+-----------------------------------------------------------------------------------------------
+EJERCICIO 7
+
+
+Especificación
+
+	proc copiarSecuencia (in s: seq<Z>, inout r: seq<Z>){
+		Pre  { |s| = |r| ∧ r = r₀}
+		Post { |s| = |r| ∧L (∀j :Z)(0 ≤ j < |s| →L s[j] = r[j] ) }
+	}
+
+Implementación en SmallLang
+	
+	i:= 0;
+	while ( i < s.size() ) do
+		r[i] := s[i];
+		i := i+1
+	endwhile
+
+Parte a
+	Pc ≡ |s| = |r| ∧ i = 0
+	Qc ≡ |s| = |r| ∧L (∀j :Z)(0 ≤ j < |s| →L s[j] = r[j] )
+
+Parte b
+	I ≡ |s| = |r| ∧ 0 ≤ i ≤ |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] )
+
+	Pc ⟶ I
+		Pc ≡ |s| = |r| ∧ i = 0
+		I  ≡ |s| = |r| ∧ 0 ≤ i ≤ |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] )
+
+		La implicancia de los primeros dos es trivial
+		El tercer término es true porque no hay ningún j tq 0≤j<0 y entonces queda False ⟶L algo ≡ True
+
+	I ∧ B ⟶ wp(S, I)
+
+		I∧B 
+			≡ |s| = |r| ∧ 0 ≤ i ≤ |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] ) ∧ i < |s|
+            ≡ |s| = |r| ∧ 0 ≤ i < |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] )
+
+
+        wp(S, I) 
+        	≡ wp( S1, wp(S2, I) )
+        	
+        	≡ wp( S1, |s| = |r| ∧ 0 ≤ i+1 ≤ |s| ∧L (∀j :Z)(0 ≤ j < i+1 ⟶L s[j] = r[j] ) )
+
+        	≡ def(s[i]) ∧L |s| = |setAt(r,i,s[i])| ∧ 0 ≤ i+1 ≤ |s| 
+        		∧L (∀j :Z)(0 ≤ j < i+1 ⟶L s[j] = setAt(r,i,s[i])[j] ) 
+
+        	≡ 0 ≤ i < |s| ∧L |s| = |r| ∧ 0 ≤ i+1 ≤ |s| 
+        		∧L (∀j :Z)(0 ≤ j < i+1 ∧ j≠i ⟶L s[j] = r[j] ) ∧ setAt(r,i,s[i])[i] = s[i]
+
+        	≡ |s| = |r| ∧ 0 ≤ i < |s| 
+        		∧L (∀j :Z)(0 ≤ j < i+1 ∧ j≠i ⟶L s[j] = r[j] )   
+
+        	≡ |s| = |r| ∧ 0 ≤ i < |s| 
+        		∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] )   //uniendo j<i+1 ∧ j≠i
+	 
+        La implicancia es trivial
+
+    I ∧¬B ⟶ Q
+
+    	I ∧¬B
+    		≡ |s| = |r| ∧ 0 ≤ i ≤ |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] )
+    		 ∧ i ≥ |s|
+
+    		≡ |s| = |r| ∧ i = |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] )
+    	 
+    		La implicancia es trivial reemplazando i=|s| en Q
+
+Parte c
+	fv = |s|-i
+
+	I ∧ B ∧ v₀=fv ⟶ wp(S, fv<v₀)
+
+		I ∧ B ∧ v₀=fv 
+			≡ |s| = |r| ∧ 0 ≤ i < |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] ) ∧ v₀ = |s|-i
+
+
+		wp(S, fv<v₀)
+			≡ wp(S1, wp(S2, fv<v₀) )
+
+			≡ wp(S1, |s|-i-1 < v₀)
+
+			≡ def(r[i]) ∧ def(s[i]) ∧L |s|-i-1 < v₀
+
+			≡ 0 ≤ i < |r| ∧ 0 ≤ i < |s| ∧ |s|-i-1 < v₀
+
+		La implicancia de los primeros dos términos es trivial
+			v₀ = |s|-i ⟶ |s|-i-1 < v₀
+			               |s|-i-1 < |s|-i
+			                    -1 < 0
+
+	I ∧ fv≤0 ⟶ ¬B
+		I ∧ fv≤0 
+			≡ |s| = |r| ∧ 0 ≤ i ≤ |s| ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] ) ∧ |s|-i ≤ 0
+
+			≡ |s| = |r| = i ∧L (∀j :Z)(0 ≤ j < i ⟶L s[j] = r[j] )
+
+
+		¬B ≡ i ≥ |s|
+
+		La implicancia es trivial
+
+
+
+
+-----------------------------------------------------------------------------------------------
+EJERCICIO 9
+
+Implementación es SmallLang
+	
+	while(i ≥ length(s)/2 ) do
+		suma := suma + s[length(s)-1-i];
+		i := i-1
+	endwhile
+
+Pre y post
+	Pc : {|s|%2 = 0 ∧ i=|s|-1 ∧ suma = 0}
+
+	Qc : {|s|%2 = 0 ∧ i=|s|/2 -1 ∧L suma = ∑(from j=0 to |s|/2 -1) (s[j])}
+
+
+Parte a
+	
+	I ≡  0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+		∧L suma = ∑(from j=0 to |s| -1 -i -1) (s[j])
+
+	  ≡ 0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+		∧L suma = ∑(from j=0 to |s| -2 -i) (s[j])
+
+		Explicación límite suma
+			i arranca en |s|-1 --> suma=0 porque va de 0 a -1
+			i al terminar la primera iteración es |s| --> el límite es 0 sumamos j[0] 
+			i termine en |s|/2-1 --> suma está bien porque |s| -1 -|s|/2 +1 -1 = |s|/2-1 
+
+Parte b
+
+	fv = i -|s|/2 +1 
+
+Parte c
+
+	Pc ⟶ I
+		Pc ≡ |s|%2 = 0 ∧ i=|s|-1 ∧ suma = 0
+
+		I ≡ 0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+			∧L suma = ∑(from j=0 to |s| -2 -i) (s[j])
+
+		Implicancia
+			0 ≤ |s|-1 -|s|/2 +1 ≤ |s|-1
+			0 ≤      |s|/2      ≤ |s|-1 
+
+			|s|-2-|s|+1 = -1
+
+	I∧B ⟶ wp(S, I)
+
+		I∧B
+			≡ 0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j]) ∧ i ≥ |s|/2 
+
+			≡ 0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j])
+
+
+		wp(S, I)
+			≡ wp(S1, wp(S2, I) )
+			
+			≡ wp(S1, 0 ≤ i -|s|/2 ≤ |s|-1 ∧ |s|%2 = 0 
+					∧L suma = ∑(from j=0 to |s| -1 -i) (s[j]))
+			
+			≡ 0 ≤ i -|s|/2 ≤ |s|-1 ∧ |s|%2 = 0 
+			 ∧L suma + s[|s|-1-i] = ∑(from j=0 to |s| -1 -i) (s[j])
+			
+			≡ 0 ≤ i -|s|/2 ≤ |s|-1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -1 -i) (s[j]) - s[|s|-1-i]
+			
+			≡ 0 ≤ i -|s|/2 ≤ |s|-1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j])
+
+
+		La implicancia es trivial
+
+	I∧¬B ⟶ Q
+		I∧¬B
+		 ≡ 0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+		  ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j]) ∧ i < |s|/2 
+
+		 ≡ i = |s|/2 -1 ∧ |s|%2 = 0 
+		  ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j])
+
+
+		Q ≡ |s|%2 = 0 ∧ i=|s|/2 -1 ∧L suma = ∑(from j=0 to |s|/2 -1) (s[j])
+
+
+		Reemplazando i = |s|/2-1 en el antecedente te queda la Q
+
+	I∧B∧v₀=fv ⟶ wp(S, fv<v₀)
+
+		I∧B∧v₀=fv
+			≡ 0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j]) ∧ v₀= i -|s|/2 +1
+
+		wp(S, fv<v₀)
+			≡ wp(S1, wp(S2, fv<v₀)  )
+
+			≡ wp(S1, i-1 -|s|/2 +1 < v₀)
+
+			≡ wp(S1,    i -|s|/2   < v₀)
+
+			≡ def(s[|s|-i-1]) ∧L i -|s|/2 < v₀
+
+			≡ 0 ≤ |s|-i-1 < |s| ∧ i -|s|/2 < v₀
+
+		Implicancia v₀ trivial
+
+		La otra implicancia
+			0 ≤ i -|s|/2 +1 ≤ |s|-1 ⟶ 0 ≤ |s|-i-1 < |s| ≡ 0 ≤ |s|-i-1 ≤ |s|-1
+			0 ≤ i -|s|/2 +1 ≤ |s|-1 ⟶ 0 ≤ |s|-i-1 ≤ |s|-1
+			dado que -|s|/2 +1 ≥ 0
+				i ≤ |s|-1 ≡ 0 ≤ |s|-i-1
+
+			-|s|/2 +1 ≥ 0 también implica i ≥ 0
+				entonces se tiene que 
+				|s|-i-1 ≤ |s|-0-1 = |s|-1
+
+	I∧fv≤0 ⟶ ¬B
+
+		I∧fv≤0
+			≡ 0 ≤ i -|s|/2 +1 ≤ |s|-1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j]) ∧ i -|s|/2 +1 ≤ 0
+
+			≡ 0 = i -|s|/2 +1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j]) 
+
+			≡ i = |s|/2 -1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -i) (s[j]) 
+
+			≡ i = |s|/2 -1 ∧ |s|%2 = 0 
+			 ∧L suma = ∑(from j=0 to |s| -2 -|s|/2 +1) (s[j]) 
+
+		¬B ≡ i < |s|/2 
+
+		La implicancia ya era trivial en el tercer renglón hice pasos de más

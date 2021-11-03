@@ -1,0 +1,4 @@
+D:/FCEyN/Descargas/FACULTAD/ALGO I/LaboEntregas/Tercera Entrega/cmake-build-debug/CMakeFiles/Tercera_Entrega.dir
+D:/FCEyN/Descargas/FACULTAD/ALGO I/LaboEntregas/Tercera Entrega/cmake-build-debug/CMakeFiles/Labo07.dir
+D:/FCEyN/Descargas/FACULTAD/ALGO I/LaboEntregas/Tercera Entrega/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/FCEyN/Descargas/FACULTAD/ALGO I/LaboEntregas/Tercera Entrega/cmake-build-debug/CMakeFiles/rebuild_cache.dir

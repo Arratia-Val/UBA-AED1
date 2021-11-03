@@ -1,0 +1,140 @@
+S ≡
+	if (s[k] = 0) then	S₁
+		i := i+1;		S₂
+		j := 0 			S₃
+	else
+		j := j+1 		S₄
+	endif
+
+Post	≡ posicionesCorrespondientes(s,k+1,i,j)
+		
+		≡ (0≤k+1<|s| ∧ 0≤j≤k+1)
+			∧ₗ (k+1-j=0 ∨ₗ s[k-j]=0)
+			∧ cantApariciones(subseq(s,k+1-j,k+1),0) = 0
+			∧ cantApariciones(subseq(s,0,k+1-j),0) = i
+
+a)
+
+Queremos calcular wp(S,Post).
+
+	wp(S,Post) 	≡ wp(S₁, Post)
+
+				≡ [Ax. if]
+				def(s[k]=0) ∧ₗ
+				 	(s[k]=0 ∧ wp(S₂;S₃,Post)) ∨
+				 	(s[k]≠0 ∧ wp(S₄,Post))
+
+				≡ 0≤k<|s| ∧ₗ
+				 	(s[k]=0 ∧ wp(S₂;S₃,Post)) ∨
+				 	(s[k]≠0 ∧ wp(S₄,Post))
+
+
+Por un lado, calculamos wp(S₂;S₃,Post).
+
+	wp(S₂;S₃,Post) 	≡ [Ax. secuencia]
+						wp(S₂,wp(S₃,Post))
+
+					≡ [Ax. asignación]
+					wp(S₂, Post^j_0)
+
+					≡ (Post^j_0)^i_i+1
+
+					≡ posicionesCorrespondientes(s,k+1,i+1,0)
+
+
+Por el otro, wp(S₄, Post).
+
+	wp(S₄,Post)	≡ Post^j_j+1 
+
+				≡ posicionesCorrespondientes(s,k+1,i,j+1)
+
+
+Retomamos wp(S₁,Post).
+
+	wp(S₁,Post) ≡ 0≤k<|s| ∧ₗ
+				 	(s[k]=0 ∧ wp(S₂;S₃,Post)) ∨
+				 	(s[k]≠0 ∧ wp(S₄,Post))
+
+				≡ 0≤k<|s| ∧ₗ
+					(s[k]=0 ∧ posicionesCorrespondientes(s,k+1,i+1,0)) ∨
+				 	(s[k]≠0 ∧ posicionesCorrespondientes(s,k+1,i,j+1))
+
+
+
+b)
+
+Pre 	≡ k+1<|s| ∧ posicionesCorrespondientes(s,k,i,j)
+		
+		≡ k+1<|s| ∧
+			(0≤k<|s| ∧ 0≤j≤k)
+			∧ₗ (k-j=0 ∨ₗ s[k-j-1]=0)
+			∧ cantApariciones(subseq(s,k-j,k),0) = 0
+			∧ cantApariciones(subseq(s,0,k-j),0) = i
+
+		≡ 0≤k<|s|-1 ∧ 0≤j≤k
+			∧ₗ (k-j=0 ∨ₗ s[k-j-1]=0)
+			∧ cantApariciones(subseq(s,k-j,k),0) = 0
+			∧ cantApariciones(subseq(s,0,k-j),0) = i
+
+
+wp(S, Post)	≡ 0≤k<|s| ∧ₗ
+				(s[k]=0 ∧ posicionesCorrespondientes(s,k+1,i+1,0)) ∨
+			 	(s[k]≠0 ∧ posicionesCorrespondientes(s,k+1,i,j+1))
+
+
+Qvq Pre ⟶ wp(S, Post).
+
+
+	Dividimos en los casos s[k]=0 y s[k]≠0.
+
+
+		s[k]=0:
+			⟶ wp(S, Post)	≡ 0≤k<|s| ∧ₗ posicionesCorrespondientes(s,k+1,i+1,0))
+
+				 			≡ 0≤k<|s| ∧ₗ
+				 				(0≤k+1<|s| ∧ 0≤0≤k+1) --> trivial
+									∧ₗ (k+1=0 ∨ₗ s[k]=0) --> s[k]=0 verdadero
+									∧ cantApariciones(subseq(s,k+1,k+1),0) = 0 --> trivial xq secuencia vacia
+									∧ cantApariciones(subseq(s,0,k+1),0) = i+1 --> quitamos la pos. k para afuera
+
+							≡ 0≤k<|s| ∧ₗ
+				 				0≤k+1<|s|
+									∧ₗcantApariciones(subseq(s,0,k),0)+(if s[k]=0 then 1 else 0) = i+1 
+							
+							≡ 0≤k<|s|-1 ∧ₗ cantApariciones(subseq(s,0,k),0)= i
+			
+			Luego, 
+			
+			- 0≤k<|s|-1 ⟶ 0≤k<|s|-1
+
+			- cantApariciones(subseq(s,k-j,k),0) = 0 ∧ cantApariciones(subseq(s,0,k-j),0) = i
+
+					⟶ cantApariciones(subseq(s,0,k),0) = i
+
+		s[k]≠0:
+			⟶ wp(S, Post)	≡ 0≤k<|s| ∧ₗ posicionesCorrespondientes(s,k+1,i,j+1))	
+
+							≡ 0≤k<|s| ∧ₗ
+								(0≤k+1<|s| ∧ 0≤j+1≤k+1)
+								∧ₗ (k-j=0 ∨ₗ s[k-j-1]=0)
+								∧ cantApariciones(subseq(s,k-j,k+1),0) = 0
+								∧ cantApariciones(subseq(s,0,k-j),0) = i
+
+							≡ 0≤k<|s|-1 ∧ₗ 
+								0≤j+1≤k+1
+								∧ₗ (k-j=0 ∨ₗ s[k-j-1]=0)
+								∧ cantApariciones(subseq(s,k-j,k),0) = 0
+								∧ cantApariciones(subseq(s,0,k-j),0) = i
+
+			Finalmente,
+
+			- 0≤k<|s|-1 ⟶ 0≤k<|s|-1
+
+			- 0≤j≤k ⟶ 0≤j+1≤k+1
+
+			- posicionesCorrespondientes(s,k,i,j) 
+							⟶ (k-j=0 ∨ₗ s[k-j-1]=0)
+								∧ cantApariciones(subseq(s,k-j,k),0) = 0
+								∧ cantApariciones(subseq(s,0,k-j),0) = i
+
+Concluímos Pre ⟶ wp(S, Post).

@@ -1,0 +1,3 @@
+"D:\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Labo030.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\Labo030.dir/objects.a @CMakeFiles\Labo030.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Labo030.dir/objects.a -Wl,--no-whole-archive -o Labo030.exe -Wl,--out-implib,libLabo030.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Labo030.dir\linklibs.rsp

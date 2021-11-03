@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/FCEyN/Descargas/FACULTAD/ALGO I/LaboEntregas/Tercera Entrega/esTriangular.cpp
+iostream
+-
+vector
+-
+

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/Labos/Labo04/Clase/main.cpp
+iostream
+-
+vector
+-
+

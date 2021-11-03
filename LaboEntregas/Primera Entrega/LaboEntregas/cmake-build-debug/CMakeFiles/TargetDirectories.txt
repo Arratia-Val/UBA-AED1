@@ -1,0 +1,8 @@
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/Labo0300.dir
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/Labo030.dir
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/Labo03.dir
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/Labo01.dir
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/Labo02.dir
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/Labo020.dir
+C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/CMakeFiles/rebuild_cache.dir

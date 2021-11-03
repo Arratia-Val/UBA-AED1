@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Labo03"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo0300">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo0300.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo0300"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo0300/fast">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo0300.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo0300/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo030">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo030.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo030"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo030/fast">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo030.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo030/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo03">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo03.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo03"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo03/fast">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo03.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo03/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo01">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo01.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo01"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo01/fast">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo01.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo01/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo02">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo02.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo02"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo02/fast">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo02.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo02/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo020">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo020.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo020"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Labo020/fast">
+				<Option output="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Labo020.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Labo020/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/division.cpp">
+			<Option target="Labo020"/>
+		</Unit>
+		<Unit filename="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/estaOrdenado.cpp">
+			<Option target="Labo030"/>
+		</Unit>
+		<Unit filename="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/fibonacci.cpp">
+			<Option target="Labo01"/>
+		</Unit>
+		<Unit filename="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/main.cpp">
+			<Option target="Labo03"/>
+		</Unit>
+		<Unit filename="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/rotar.cpp">
+			<Option target="Labo0300"/>
+		</Unit>
+		<Unit filename="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/swap.cpp">
+			<Option target="Labo02"/>
+		</Unit>
+		<Unit filename="C:/Users/FCEyN/Downloads/FACULTAD/ALGO I/LaboEntregas/LaboEntregas/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Tercera_Entrega.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\Tercera_Entrega.dir/objects.a @CMakeFiles\Tercera_Entrega.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Tercera_Entrega.dir/objects.a -Wl,--no-whole-archive -o Tercera_Entrega.exe -Wl,--out-implib,libTercera_Entrega.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Tercera_Entrega.dir\linklibs.rsp
